@@ -160,11 +160,12 @@ Industrial Galeon theme.
 %description -n galeon-theme-Industrial -l pl
 Motyw Industrial dla Galeona.
 
-%package -n wallpapers-Industrial
+%package -n desktop-wallpapers-Industrial
 Summary:	Industrial wallpapers
 Summary(pl):	Tapety w stylu Industrial
 Group:		Themes
 Obsoletes:	ximian-artwork-backgrounds
+Obsoletes:	wallpapers-industrial
 
 %description -n wallpapers-Industrial
 Industrial wallpapers
@@ -252,6 +253,6 @@ exit 0
 %defattr(644,root,root,755)
 %{_datadir}/galeon/themes/*
 
-%files -n wallpapers-Industrial
+%files -n desktop-wallpapers-Industrial
 %defattr(644,root,root,755)
 %{_datadir}/wallpapers
