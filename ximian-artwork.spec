@@ -2,7 +2,7 @@ Summary:	Ximian Industrial theme
 Summary(pl):	Motyw Ximian Industrial
 Name:		ximian-artwork
 Version:	0.2.34
-Release:	6
+Release:	7
 License:	GPL
 Group:		Themes
 Source0:	%{name}-%{version}.tar.gz
@@ -13,7 +13,7 @@ URL:		http://www.ximian.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel >= 1.2.9
-BuildRequires:	gtk+2-devel
+BuildRequires:	gtk+2-devel >= 2:2.6.1
 BuildRequires:	intltool >= 0.23
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
@@ -33,7 +33,7 @@ Summary(pl):	Ikony Industrial
 Group:		Themes
 Obsoletes:	ximian-artwork
 # contains dir used by icons
-Requires:	XcursorTheme-Industrial
+Requires:	XcursorTheme-Industrial = %{version}-%{release}
 
 %description -n icons-Industrial
 Industrial icons for GNOME & KDE.
@@ -70,11 +70,12 @@ Motyw Industrial dla Metacity.
 Summary:	GNOME Industrial theme
 Summary(pl):	Industrial dla GNOME
 Group:		Themes
-Requires:	icons-Industrial
-Requires:	metacity-themes-Industrial
-Requires:	gtk2-theme-engine-Industrial
-Requires:	gtk-theme-engine-Industrial
-Requires:	nautilus-theme-Industrial
+Requires:	icons-Industrial = %{version}-%{release}
+Requires:	metacity-themes-Industrial = %{version}-%{release}
+Requires:	gtk2-engines >= 1:2.6.0-1
+Requires:	gtk2-theme-Industrial = %{version}-%{release}
+Requires:	gtk-theme-engine-Industrial = %{version}-%{release}
+Requires:	nautilus-theme-Industrial = %{version}-%{release}
 Obsoletes:	ximian-artwork
 
 %description -n gnome-theme-Industrial
@@ -83,17 +84,16 @@ GNOME Industrial theme (gtk, gtk2, metacity, nautilus).
 %description -n gnome-theme-Industrial -l pl
 Motyw Industrial dla GNOME (gtk, gtk2, metacity, nautilus).
 
-%package -n gtk2-theme-engine-Industrial
+%package -n gtk2-theme-Industrial
 Summary:	GTK+2 Industrial theme
 Summary(pl):	Industrial dla GTK+2
 Group:		Themes
-Requires(post):	gtk+2
 Obsoletes:	ximian-artwork
 
-%description -n gtk2-theme-engine-Industrial
+%description -n gtk2-theme-Industrial
 GTK+2 Industrial theme.
 
-%description -n gtk2-theme-engine-Industrial -l pl
+%description -n gtk2-theme-Industrial -l pl
 Motyw Industrial dla GTK+2.
 
 %package -n nautilus-theme-Industrial
@@ -195,13 +195,12 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# .a, .la are not needed, .so is included in gtk2-engines
+rm -f $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/*/engines/*.{a,la,so}
+rm -f $RPM_BUILD_ROOT%{_libdir}/gtk/themes/engines/*.{a,la}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-%post -n gtk2-theme-engine-Industrial
-umask 022
-%{_bindir}/gdk-pixbuf-query-loaders >%{_sysconfdir}/gtk-2.0/gdk-pixbuf.loaders
-exit 0
 
 %files -n icons-Industrial
 %defattr(644,root,root,755)
@@ -219,10 +218,10 @@ exit 0
 %defattr(644,root,root,755)
 %{_datadir}/themes/Industrial/index.theme
 
-%files -n gtk2-theme-engine-Industrial
+%files -n gtk2-theme-Industrial
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/gtk-2.0/*/engines/libindustrial.so
-%{_datadir}/themes/Industrial/gtk-2.0
+%{_datadir}/themes/Industrial/gtk-2.0/*
+%exclude %{_datadir}/themes/Industrial/gtk-2.0/gtkrc
 
 %files -n gtk-theme-engine-Industrial
 %defattr(644,root,root,755)
