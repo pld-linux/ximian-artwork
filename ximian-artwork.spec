@@ -19,7 +19,6 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.125
 BuildRequires:	xmms-devel
-Requires(post):	gtk+2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -87,6 +86,7 @@ Motyw Industrial dla GNOME (gtk, gtk2, metacity, nautilus).
 Summary:	GTK+2 Industrial theme
 Summary(pl):	Industrial dla GTK+2
 Group:		Themes
+Requires(post):	gtk+2
 Obsoletes:	ximian-artwork
 
 %description -n gtk2-theme-engine-Industrial
