@@ -2,7 +2,7 @@ Summary:	Ximian Industrial theme
 Summary(pl):	Motyw Ximian Industrial
 Name:		ximian-artwork
 Version:	0.2.34
-Release:	7
+Release:	8
 License:	GPL
 Group:		Themes
 Source0:	%{name}-%{version}.tar.gz
@@ -16,6 +16,7 @@ BuildRequires:	gtk+-devel >= 1.2.9
 BuildRequires:	gtk+2-devel >= 2:2.6.1
 BuildRequires:	intltool >= 0.23
 BuildRequires:	libtool
+BuildRequires:	metacity
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.125
 BuildRequires:	xmms-devel
@@ -43,7 +44,7 @@ Ikony Industrial dla GNOME i KDE.
 
 %package -n gtk-theme-engine-Industrial
 Summary:	GTK+ Industrial theme
-Summary(pl):	Industrial dla GTK+
+Summary(pl):	Motyw Industrial dla GTK+
 Group:		Themes
 Obsoletes:	ximian-artwork
 
@@ -55,9 +56,10 @@ Motyw Industrial dla GTK.
 
 %package -n metacity-themes-Industrial
 Summary:	Metacity Industrial theme
-Summary(pl):	Industrial dla Metacity
+Summary(pl):	Motyw Industrial dla Metacity
 Group:		Themes
-Requires:	metacity
+Requires:	metacity = %(rpm -q --qf '%{EPOCH}:%{VERSION}' metacity)
+Provides:	metacity-theme-base = %(rpm -q --qf '%{EPOCH}:%{VERSION}' metacity)
 Obsoletes:	ximian-artwork
 
 %description -n metacity-themes-Industrial
@@ -68,7 +70,7 @@ Motyw Industrial dla Metacity.
 
 %package -n gnome-theme-Industrial
 Summary:	GNOME Industrial theme
-Summary(pl):	Industrial dla GNOME
+Summary(pl):	Motyw Industrial dla GNOME
 Group:		Themes
 Requires:	icons-Industrial = %{version}-%{release}
 Requires:	metacity-themes-Industrial = %{version}-%{release}
@@ -86,7 +88,7 @@ Motyw Industrial dla GNOME (gtk, gtk2, metacity, nautilus).
 
 %package -n gtk2-theme-Industrial
 Summary:	GTK+2 Industrial theme
-Summary(pl):	Industrial dla GTK+2
+Summary(pl):	Motyw Industrial dla GTK+2
 Group:		Themes
 Obsoletes:	ximian-artwork
 
@@ -98,7 +100,7 @@ Motyw Industrial dla GTK+2.
 
 %package -n nautilus-theme-Industrial
 Summary:	Nautilus Industrial theme
-Summary(pl):	Industrial dla Nautilusa
+Summary(pl):	Motyw Industrial dla Nautilusa
 Group:		Themes
 Requires:	nautilus
 Obsoletes:	ximian-artwork
@@ -169,10 +171,10 @@ Obsoletes:	ximian-artwork-backgrounds
 Obsoletes:	wallpapers-Industrial
 
 %description -n desktop-wallpapers-Industrial
-Industrial wallpapers
+Industrial wallpapers.
 
 %description -n desktop-wallpapers-Industrial -l pl
-Tapety w stylu Industrial
+Tapety w stylu Industrial.
 
 %prep
 %setup -q
