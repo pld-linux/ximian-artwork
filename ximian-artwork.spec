@@ -2,7 +2,7 @@ Summary:	Ximian Industrial theme
 Summary(pl):	Motyw Ximian Industrial
 Name:		ximian-artwork
 Version:	0.2.34
-Release:	1
+Release:	2
 License:	GPL
 Group:		Themes
 Source0:	%{name}-%{version}.tar.gz
@@ -22,60 +22,154 @@ Requires(post):	gtk+2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-ximian-artwork contains the default style configuration for the Ximian
-Desktop. This package contains themes for GNOME2, gdm, xmms and
-galeon.
+Industrial look & feel.
 
 %description -l pl
-ximian-artwork zawiera domy¶lny motyw dla Ximian Desktop. Pakiet ten
-zawiera motywy dla GNOME2, gdm, xmms oraz dla galeona.
+Wygl±dy Industrial.
 
-%package backgrounds
-Summary:	Ximian Industrial theme - backgrounds
-Summary(pl):	Motyw Ximian Industrial - t³a
+%package -n icons-Industrial
+Summary:	Industrial icons
+Summary(pl):	Ikony Industrial
 Group:		Themes
+Obsoletes:	ximian-artwork
+# contains dir used by icons
+Requires:	XcursorTheme-Industrial
 
-%description backgrounds
-Ximian Industrial theme - backgrounds.
+%description -n icons-Industrial
+Industrial icons for GNOME & KDE.
 
-%description backgrounds -l pl
-Motyw Ximian Industrial - t³a.
+%description -n icons-Industrial -l pl
+Ikony Industrial dla GNOME i KDE.
 
-%package galeon
-Summary:	Ximian Industrial theme for galeon
-Summary(pl):	Motyw Ximian Industrial dla galeona
+%package -n gtk-theme-engine-Industrial
+Summary:	GTK+ Industrial theme
+Summary(pl):	Industrial dla GTK+
+Group:		Themes
+Obsoletes:	ximian-artwork
+
+%description -n gtk-theme-engine-Industrial
+GTK+ Industrial theme.
+
+%description -n gtk-theme-engine-Industrial -l pl
+Motyw Industrial dla GTK.
+
+%package -n metacity-themes-Industrial
+Summary:	Metacity Industrial theme
+Summary(pl):	Industrial dla Metacity
+Group:		Themes
+Obsoletes:	ximian-artwork
+
+%description -n metacity-themes-Industrial
+GTK+ Industrial Metacity.
+
+%description -n metacity-themes-Industrial -l pl
+Motyw Industrial dla Metacity.
+
+%package -n gnome-theme-Industrial
+Summary:	GNOME Industrial theme
+Summary(pl):	Industrial dla GNOME
+Group:		Themes
+Requires:	icons-Industrial
+Requires:	metacity-themes-Industrial
+Requires:	gtk2-theme-engine-Industrial
+Requires:	gtk-theme-engine-Industrial
+Requires:	nautilus-theme-Industrial
+Obsoletes:	ximian-artwork
+
+%description -n gnome-theme-Industrial
+GNOME Industrial theme (gtk, gtk2, metacity, nautilus).
+
+%description -n gnome-theme-Industrial -l pl
+Motyw Industrial dla GNOME (gtk, gtk2, metacity, nautilus).
+
+%package -n gtk2-theme-engine-Industrial
+Summary:	GTK+2 Industrial theme
+Summary(pl):	Industrial dla GTK+2
+Group:		Themes
+Obsoletes:	ximian-artwork
+
+%description -n gtk2-theme-engine-Industrial
+GTK+2 Industrial theme.
+
+%description -n gtk2-theme-engine-Industrial -l pl
+Motyw Industrial dla GTK+2.
+
+%package -n nautilus-theme-Industrial
+Summary:	Nautilus Industrial theme
+Summary(pl):	Industrial dla Nautilusa
+Group:		Themes
+Requires:	nautilus
+Obsoletes:	ximian-artwork
+
+%description -n nautilus-theme-Industrial
+Nautilus Industrial theme.
+
+%description -n nautilus-theme-Industrial -l pl
+Motyw Industrial dla Nautilusa.
+
+%package -n xmms-skin-Industrial
+Summary:	XMMS skin taken from Industrial
+Summary(pl):	Skórka dla XMMS-a w stylu Industrial
+Group:		X11/Applications/Multimedia
+Requires:	xmms
+Obsoletes:	ximian-artwork-xmms
+
+%description -n xmms-skin-Industrial
+XMMS skin taken from Industrial.
+
+%description -n xmms-skin-Industrial -l pl
+Skórka dla XMMS-a w stylu Industrial.
+
+%package -n XcursorTheme-Industrial
+Summary:	Industrial cursor pack
+Summary(pl):	Motyw kursorów Industrial
+Group:		X11/XFree86
+Requires:	XFree86 
+Obsoletes:	ximian-artwork
+
+%description -n XcursorTheme-Industrial
+Industrial cursor pack.
+
+%description -n XcursorTheme-Industrial -l pl
+Motyw kursorów Industrial.
+
+%package -n gdm-theme-Industrial
+Summary:	Industrial GDM theme
+Summary(pl):	Motyw Industrial dla GDM-a
+Group:		Themes
+Requires:	gdm >= 2.4
+Obsoletes:	ximian-artwork-gdm
+
+%description -n gdm-theme-Industrial
+Industrial GDM theme.
+
+%description -n gdm-theme-Industrial -l pl
+Motyw Industrial dla GDM-a.
+
+%package -n galeon-theme-Industrial
+Summary:	Industrial Galon theme
+Summary(pl):	Motyw Industrial dla Galeona
 Group:		Themes
 Requires:	galeon
+Obsoletes:	ximian-artwork-galeon
 
-%description galeon
-Ximian Industrial theme for galeon.
+%description -n galeon-theme-Industrial
+Industrial Galeon theme.
 
-%description galeon -l pl
-Motyw Ximian Industrial dla galeona.
+%description -n galeon-theme-Industrial -l pl
+Motyw Industrial dla Galeona.
 
-%package gdm
-Summary:	Ximian Industrial theme for gdm
-Summary(pl):	Motyw Ximian Industrial dla gdm
+%package -n wallpapers-Industrial
+Summary:	Industrial wallpapers
+Summary(pl):	Tapety w stylu Industrial
 Group:		Themes
-Requires:	gdm
+Obsoletes:	ximian-artwork-backgrounds
 
-%description gdm
-Ximian Industrial theme for gdm.
+%description -n wallpapers-Industrial
+Industrial wallpapers
 
-%description gdm -l pl
-Motyw Ximian Industrial dla gdm.
-
-%package xmms
-Summary:	Ximian Industrial theme for xmms
-Summary(pl):	Motyw Ximian Industrial dla xmms
-Group:		Themes
-Requires:	xmms
-
-%description xmms
-Ximian Industrial theme for xmms.
-
-%description xmms -l pl
-Motyw Ximian Industrial dla xmms.
+%description -n wallpapers-Industrial -l pl
+Tapety w stylu Industrial
 
 %prep
 %setup -q
@@ -100,33 +194,62 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post
+%post -n gtk2-theme-engine-Industrial
 umask 022
 %{_bindir}/gdk-pixbuf-query-loaders >%{_sysconfdir}/gtk-2.0/gdk-pixbuf.loaders
 exit 0
 
-%files
+%files -n icons-Industrial
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/gtk/themes/engines/libindustrial.so
-%attr(755,root,root) %{_libdir}/gtk-2.0/*/engines/libindustrial.so
-%{_datadir}/themes/*
+%{_iconsdir}/Industrial/24x24
+%{_iconsdir}/Industrial/32x32
+%{_iconsdir}/Industrial/48x48
+%{_iconsdir}/Industrial/72x72
+%{_iconsdir}/Industrial/96x96
+%{_iconsdir}/Industrial/scalable
+%{_iconsdir}/Industrial/index.theme
 %{_pixmapsdir}/*.png
 %{_pixmapsdir}/ximian
+
+%files -n gnome-theme-Industrial
+%defattr(644,root,root,755)
+%{_datadir}/themes/Industrial/index.theme
+
+%files -n gtk2-theme-engine-Industrial
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/gtk-2.0/*/engines/libindustrial.so
+%{_datadir}/themes/Industrial/gtk-2.0
+
+%files -n gtk-theme-engine-Industrial
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/gtk/themes/engines/libindustrial.so
+%{_datadir}/themes/Industrial/gtk
+
+%files -n metacity-themes-Industrial
+%defattr(644,root,root,755)
+%{_datadir}/themes/Industrial/metacity*/
+
+%files -n nautilus-theme-Industrial
+%defattr(644,root,root,755)
 %{_pixmapsdir}/nautilus/*
-%{_datadir}/icons/Industrial/
 
-%files backgrounds
-%defattr(644,root,root,755)
-%{_pixmapsdir}/backgrounds
-
-%files galeon
-%defattr(644,root,root,755)
-%{_datadir}/galeon/themes/*
-
-%files gdm
+%files -n gdm-theme-Industrial
 %defattr(644,root,root,755)
 %{_datadir}/gdm/themes/*
 
-%files xmms
+%files -n xmms-skin-Industrial
 %defattr(644,root,root,755)
 %{xmms_datadir}/Skins/*
+
+%files -n XcursorTheme-Industrial
+%defattr(644,root,root,755)
+%dir %{_iconsdir}/Industrial
+%{_iconsdir}/Industrial/cursors
+
+%files -n galeon-theme-Industrial
+%defattr(644,root,root,755)
+%{_datadir}/galeon/themes/*
+
+%files -n wallpapers-Industrial
+%defattr(644,root,root,755)
+%{_pixmapsdir}/backgrounds
