@@ -2,7 +2,7 @@ Summary:	Ximian Industrial theme
 Summary(pl):	Motyw Ximian Industrial
 Name:		ximian-artwork
 Version:	0.2.34
-Release:	5
+Release:	6
 License:	GPL
 Group:		Themes
 Source0:	%{name}-%{version}.tar.gz
@@ -57,6 +57,7 @@ Motyw Industrial dla GTK.
 Summary:	Metacity Industrial theme
 Summary(pl):	Industrial dla Metacity
 Group:		Themes
+Requires:	metacity
 Obsoletes:	ximian-artwork
 
 %description -n metacity-themes-Industrial
