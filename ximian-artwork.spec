@@ -2,7 +2,7 @@ Summary:	Ximian Industrial theme
 Summary(pl):	Motyw Ximian Industrial
 Name:		ximian-artwork
 Version:	0.2.32
-Release:	1
+Release:	2
 License:	GPL
 Group:		Themes
 Source0:	%{name}-%{version}.tar.gz
@@ -95,7 +95,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_pixmapsdir}/ximian
 %{_pixmapsdir}/nautilus/*
 %{_libdir}/gtk/themes/engines/libindustrial.so
-%{_libdir}/gtk-2.0/2.2.0/engines/libindustrial.so
+%{_libdir}/gtk-2.0/*/engines/libindustrial.so
 %{_datadir}/icons/Industrial/
 %{_datadir}/icons/gnome/*/*/*
 
