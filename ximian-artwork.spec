@@ -8,6 +8,7 @@ Group:		Themes
 Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	f7121cf3f5fca9170e1c1ba32cceab0d
 Patch0:		%{name}-enginesdir.patch
+Patch1:		%{name}-wallpapersdir.patch
 URL:		http://www.ximian.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -174,6 +175,7 @@ Tapety w stylu Industrial
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 cp -f /usr/share/automake/config.sub .
