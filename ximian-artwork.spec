@@ -2,7 +2,7 @@ Summary:	Ximian Industrial theme
 Summary(pl):	Motyw Ximian Industrial
 Name:		ximian-artwork
 Version:	0.2.34
-Release:	3
+Release:	4
 License:	GPL
 Group:		Themes
 Source0:	%{name}-%{version}.tar.gz
@@ -165,7 +165,7 @@ Summary:	Industrial wallpapers
 Summary(pl):	Tapety w stylu Industrial
 Group:		Themes
 Obsoletes:	ximian-artwork-backgrounds
-Obsoletes:	wallpapers-industrial
+Obsoletes:	wallpapers-Industrial
 
 %description -n desktop-wallpapers-Industrial
 Industrial wallpapers
