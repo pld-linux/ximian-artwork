@@ -59,7 +59,7 @@ Summary:	Metacity Industrial theme
 Summary(pl):	Motyw Industrial dla Metacity
 Group:		Themes
 Requires:	metacity = %(rpm -q --qf '%{EPOCH}:%{VERSION}' metacity)
-Provides:	metacity-theme-base = %(rpm -q --qf '%{EPOCH}:%{VERSION}' metacity)
+Provides:	metacity-theme-base = %(rpm -q --qf '%{EPOCH}:%{VERSION}-%{RELEASE}' metacity)
 Obsoletes:	ximian-artwork
 
 %description -n metacity-themes-Industrial
