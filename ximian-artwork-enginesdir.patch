@@ -1,0 +1,25 @@
+diff -urN aa/ximian-artwork-0.2.34/configure.ac ximian-artwork-0.2.34/configure.ac
+--- aa/ximian-artwork-0.2.34/configure.ac	2004-03-23 21:50:33.000000000 +0100
++++ ximian-artwork-0.2.34/configure.ac	2004-03-28 17:05:55.530632600 +0200
+@@ -29,6 +29,9 @@
+ AC_SUBST(XIMART_CFLAGS)
+ AC_SUBST(XIMART_LIBS)
+ 
++GTK2_VERSION=`pkg-config --variable=gtk_binary_version gtk+-2.0`
++AC_SUBST(GTK2_VERSION)
++
+ AC_CONFIG_FILES([
+ Makefile
+ galeon/Makefile
+diff -urN aa/ximian-artwork-0.2.34/gtk/gtk2-engine/Makefile.am ximian-artwork-0.2.34/gtk/gtk2-engine/Makefile.am
+--- aa/ximian-artwork-0.2.34/gtk/gtk2-engine/Makefile.am	2004-03-23 20:54:38.000000000 +0100
++++ ximian-artwork-0.2.34/gtk/gtk2-engine/Makefile.am	2004-03-28 17:06:53.632799728 +0200
+@@ -2,7 +2,7 @@
+ 
+ INCLUDES=$(XIMART_CFLAGS)
+ 
+-enginedir=$(libdir)/gtk-2.0/engines
++enginedir=$(libdir)/gtk-2.0/$(GTK2_VERSION)/engines
+ engine_LTLIBRARIES=libindustrial.la
+ 
+ libindustrial_la_SOURCES =			\
