@@ -1,19 +1,24 @@
 Summary:	Ximian Industrial theme
 Summary(pl):	Motyw Ximian Industrial
 Name:		ximian-artwork
-Version:	0.2.32
-Release:	3
+Version:	0.2.34
+Release:	1
 License:	GPL
 Group:		Themes
 Source0:	%{name}-%{version}.tar.gz
-# Source0-md5:	a5a602b15956020d56b561d833351bd4
+# Source0-md5:	f7121cf3f5fca9170e1c1ba32cceab0d
+Patch0:		%{name}-enginesdir.patch
 URL:		http://www.ximian.com/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gtk+-devel >= 1.2.9
 BuildRequires:	gtk+2-devel
 BuildRequires:	intltool >= 0.23
+BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.125
 BuildRequires:	xmms-devel
+Requires(post):	gtk+2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -74,9 +79,15 @@ Motyw Ximian Industrial dla xmms.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 cp -f /usr/share/automake/config.sub .
+intltoolize --copy --force
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
@@ -96,14 +107,13 @@ exit 0
 
 %files
 %defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/gtk/themes/engines/libindustrial.so
+%attr(755,root,root) %{_libdir}/gtk-2.0/*/engines/libindustrial.so
 %{_datadir}/themes/*
 %{_pixmapsdir}/*.png
 %{_pixmapsdir}/ximian
 %{_pixmapsdir}/nautilus/*
-%{_libdir}/gtk/themes/engines/libindustrial.so
-%{_libdir}/gtk-2.0/*/engines/libindustrial.so
 %{_datadir}/icons/Industrial/
-%{_datadir}/icons/gnome/*/*/*
 
 %files backgrounds
 %defattr(644,root,root,755)
