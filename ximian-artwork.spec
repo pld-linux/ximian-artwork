@@ -11,7 +11,7 @@ URL:		http://www.ximian.com/
 BuildRequires:	gtk+-devel >= 1.2.9
 BuildRequires:	gtk+2-devel
 BuildRequires:	rpmbuild(macros) >= 1.125
-Buildrequires:	xmms-devel
+BuildRequires:	xmms-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
