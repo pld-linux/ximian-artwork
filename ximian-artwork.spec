@@ -1,15 +1,17 @@
 Summary:	Ximian Industrial theme
 Summary(pl):	Motyw Ximian Industrial
 Name:		ximian-artwork
-Version:	0.2.26
-Release:	2
+Version:	0.2.32
+Release:	1
 License:	GPL
 Group:		Themes
-Source0:	%{name}-%{version}.tar.bz2
-# Source0-md5:	4531b48865b49ec9eb6a968f81904a4f
+Source0:	%{name}-%{version}.tar.gz
+# Source0-md5:	a5a602b15956020d56b561d833351bd4
 URL:		http://www.ximian.com/
 BuildRequires:	gtk+-devel >= 1.2.9
 BuildRequires:	gtk+2-devel
+BuildRequires:	intltool >= 0.23
+BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.125
 BuildRequires:	xmms-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
