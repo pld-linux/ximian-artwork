@@ -167,10 +167,10 @@ Group:		Themes
 Obsoletes:	ximian-artwork-backgrounds
 Obsoletes:	wallpapers-industrial
 
-%description -n description-wallpapers-Industrial
+%description -n desktop-wallpapers-Industrial
 Industrial wallpapers
 
-%description -n description-wallpapers-Industrial -l pl
+%description -n desktop-wallpapers-Industrial -l pl
 Tapety w stylu Industrial
 
 %prep
