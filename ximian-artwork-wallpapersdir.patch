@@ -1,0 +1,11 @@
+diff -urN ximian-artwork-0.2.34.orig/wallpapers/Makefile.am ximian-artwork-0.2.34/wallpapers/Makefile.am
+--- ximian-artwork-0.2.34.orig/wallpapers/Makefile.am	2003-08-14 13:38:21.000000000 +0200
++++ ximian-artwork-0.2.34/wallpapers/Makefile.am	2004-07-12 16:45:15.588589840 +0200
+@@ -3,6 +3,6 @@
+ 		 monkeyXplosion.jpeg Mono.jpeg RedLeaves.jpeg \
+ 		 Roses.jpeg Subway.jpeg PixelBack.jpeg SteelStripes.jpeg \
+        xd2-xinerama-tile.png xd2-xinerama-tile2.png xd2-intro.jpeg
+-wallpaperdir = $(datadir)/pixmaps/backgrounds/ximian
++wallpaperdir = $(datadir)/wallpapers/ximian
+ 
+ EXTRA_DIST = $(wallpaper_DATA)
