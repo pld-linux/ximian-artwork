@@ -2,7 +2,7 @@ Summary:	Ximian Industrial theme
 Summary(pl):	Motyw Ximian Industrial
 Name:		ximian-artwork
 Version:	0.2.32
-Release:	2
+Release:	3
 License:	GPL
 Group:		Themes
 Source0:	%{name}-%{version}.tar.gz
@@ -88,6 +88,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+umask 022
+%{_bindir}/gdk-pixbuf-query-loaders >%{_sysconfdir}/gtk-2.0/gdk-pixbuf.loaders
+exit 0
 
 %files
 %defattr(644,root,root,755)
