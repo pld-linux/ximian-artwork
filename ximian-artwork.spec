@@ -76,6 +76,7 @@ Motyw Ximian Industrial dla xmms.
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.sub .
 %configure
 %{__make}
 
