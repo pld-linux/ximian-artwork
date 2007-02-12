@@ -1,5 +1,5 @@
 Summary:	Ximian Industrial theme
-Summary(pl.UTF-8):   Motyw Ximian Industrial
+Summary(pl.UTF-8):	Motyw Ximian Industrial
 Name:		ximian-artwork
 Version:	0.2.34
 Release:	8
@@ -30,7 +30,7 @@ Wyglądy Industrial.
 
 %package -n icons-Industrial
 Summary:	Industrial icons
-Summary(pl.UTF-8):   Ikony Industrial
+Summary(pl.UTF-8):	Ikony Industrial
 Group:		Themes
 Obsoletes:	ximian-artwork
 # contains dir used by icons
@@ -44,7 +44,7 @@ Ikony Industrial dla GNOME i KDE.
 
 %package -n gtk-theme-engine-Industrial
 Summary:	GTK+ Industrial theme
-Summary(pl.UTF-8):   Motyw Industrial dla GTK+
+Summary(pl.UTF-8):	Motyw Industrial dla GTK+
 Group:		Themes
 Obsoletes:	ximian-artwork
 
@@ -56,7 +56,7 @@ Motyw Industrial dla GTK.
 
 %package -n metacity-themes-Industrial
 Summary:	Metacity Industrial theme
-Summary(pl.UTF-8):   Motyw Industrial dla Metacity
+Summary(pl.UTF-8):	Motyw Industrial dla Metacity
 Group:		Themes
 Requires:	metacity = %(rpm -q --qf '%{EPOCH}:%{VERSION}' metacity)
 Provides:	metacity-theme-base = %(rpm -q --qf '%{EPOCH}:%{VERSION}-%{RELEASE}' metacity)
@@ -70,7 +70,7 @@ Motyw Industrial dla Metacity.
 
 %package -n gnome-theme-Industrial
 Summary:	GNOME Industrial theme
-Summary(pl.UTF-8):   Motyw Industrial dla GNOME
+Summary(pl.UTF-8):	Motyw Industrial dla GNOME
 Group:		Themes
 Requires:	icons-Industrial = %{version}-%{release}
 Requires:	metacity-themes-Industrial = %{version}-%{release}
@@ -88,7 +88,7 @@ Motyw Industrial dla GNOME (gtk, gtk2, metacity, nautilus).
 
 %package -n gtk2-theme-Industrial
 Summary:	GTK+2 Industrial theme
-Summary(pl.UTF-8):   Motyw Industrial dla GTK+2
+Summary(pl.UTF-8):	Motyw Industrial dla GTK+2
 Group:		Themes
 Obsoletes:	ximian-artwork
 
@@ -100,7 +100,7 @@ Motyw Industrial dla GTK+2.
 
 %package -n nautilus-theme-Industrial
 Summary:	Nautilus Industrial theme
-Summary(pl.UTF-8):   Motyw Industrial dla Nautilusa
+Summary(pl.UTF-8):	Motyw Industrial dla Nautilusa
 Group:		Themes
 Requires:	nautilus
 Obsoletes:	ximian-artwork
@@ -113,7 +113,7 @@ Motyw Industrial dla Nautilusa.
 
 %package -n xmms-skin-Industrial
 Summary:	XMMS skin taken from Industrial
-Summary(pl.UTF-8):   Skórka dla XMMS-a w stylu Industrial
+Summary(pl.UTF-8):	Skórka dla XMMS-a w stylu Industrial
 Group:		X11/Applications/Multimedia
 Requires:	xmms
 Obsoletes:	ximian-artwork-xmms
@@ -126,7 +126,7 @@ Skórka dla XMMS-a w stylu Industrial.
 
 %package -n XcursorTheme-Industrial
 Summary:	Industrial cursor pack
-Summary(pl.UTF-8):   Motyw kursorów Industrial
+Summary(pl.UTF-8):	Motyw kursorów Industrial
 Group:		X11/XFree86
 Requires:	XFree86 
 Obsoletes:	ximian-artwork
@@ -139,7 +139,7 @@ Motyw kursorów Industrial.
 
 %package -n gdm-theme-Industrial
 Summary:	Industrial GDM theme
-Summary(pl.UTF-8):   Motyw Industrial dla GDM-a
+Summary(pl.UTF-8):	Motyw Industrial dla GDM-a
 Group:		Themes
 Requires:	gdm >= 2.4
 Obsoletes:	ximian-artwork-gdm
@@ -152,7 +152,7 @@ Motyw Industrial dla GDM-a.
 
 %package -n galeon-theme-Industrial
 Summary:	Industrial Galon theme
-Summary(pl.UTF-8):   Motyw Industrial dla Galeona
+Summary(pl.UTF-8):	Motyw Industrial dla Galeona
 Group:		Themes
 Requires:	galeon
 Obsoletes:	ximian-artwork-galeon
@@ -165,7 +165,7 @@ Motyw Industrial dla Galeona.
 
 %package -n desktop-wallpapers-Industrial
 Summary:	Industrial wallpapers
-Summary(pl.UTF-8):   Tapety w stylu Industrial
+Summary(pl.UTF-8):	Tapety w stylu Industrial
 Group:		Themes
 Obsoletes:	ximian-artwork-backgrounds
 Obsoletes:	wallpapers-Industrial
