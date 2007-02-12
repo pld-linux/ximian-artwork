@@ -1,5 +1,5 @@
 Summary:	Ximian Industrial theme
-Summary(pl):	Motyw Ximian Industrial
+Summary(pl.UTF-8):   Motyw Ximian Industrial
 Name:		ximian-artwork
 Version:	0.2.34
 Release:	8
@@ -25,12 +25,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Industrial look & feel.
 
-%description -l pl
-Wygl眃y Industrial.
+%description -l pl.UTF-8
+Wygl膮dy Industrial.
 
 %package -n icons-Industrial
 Summary:	Industrial icons
-Summary(pl):	Ikony Industrial
+Summary(pl.UTF-8):   Ikony Industrial
 Group:		Themes
 Obsoletes:	ximian-artwork
 # contains dir used by icons
@@ -39,24 +39,24 @@ Requires:	XcursorTheme-Industrial = %{version}-%{release}
 %description -n icons-Industrial
 Industrial icons for GNOME & KDE.
 
-%description -n icons-Industrial -l pl
+%description -n icons-Industrial -l pl.UTF-8
 Ikony Industrial dla GNOME i KDE.
 
 %package -n gtk-theme-engine-Industrial
 Summary:	GTK+ Industrial theme
-Summary(pl):	Motyw Industrial dla GTK+
+Summary(pl.UTF-8):   Motyw Industrial dla GTK+
 Group:		Themes
 Obsoletes:	ximian-artwork
 
 %description -n gtk-theme-engine-Industrial
 GTK+ Industrial theme.
 
-%description -n gtk-theme-engine-Industrial -l pl
+%description -n gtk-theme-engine-Industrial -l pl.UTF-8
 Motyw Industrial dla GTK.
 
 %package -n metacity-themes-Industrial
 Summary:	Metacity Industrial theme
-Summary(pl):	Motyw Industrial dla Metacity
+Summary(pl.UTF-8):   Motyw Industrial dla Metacity
 Group:		Themes
 Requires:	metacity = %(rpm -q --qf '%{EPOCH}:%{VERSION}' metacity)
 Provides:	metacity-theme-base = %(rpm -q --qf '%{EPOCH}:%{VERSION}-%{RELEASE}' metacity)
@@ -65,12 +65,12 @@ Obsoletes:	ximian-artwork
 %description -n metacity-themes-Industrial
 GTK+ Industrial Metacity.
 
-%description -n metacity-themes-Industrial -l pl
+%description -n metacity-themes-Industrial -l pl.UTF-8
 Motyw Industrial dla Metacity.
 
 %package -n gnome-theme-Industrial
 Summary:	GNOME Industrial theme
-Summary(pl):	Motyw Industrial dla GNOME
+Summary(pl.UTF-8):   Motyw Industrial dla GNOME
 Group:		Themes
 Requires:	icons-Industrial = %{version}-%{release}
 Requires:	metacity-themes-Industrial = %{version}-%{release}
@@ -83,24 +83,24 @@ Obsoletes:	ximian-artwork
 %description -n gnome-theme-Industrial
 GNOME Industrial theme (gtk, gtk2, metacity, nautilus).
 
-%description -n gnome-theme-Industrial -l pl
+%description -n gnome-theme-Industrial -l pl.UTF-8
 Motyw Industrial dla GNOME (gtk, gtk2, metacity, nautilus).
 
 %package -n gtk2-theme-Industrial
 Summary:	GTK+2 Industrial theme
-Summary(pl):	Motyw Industrial dla GTK+2
+Summary(pl.UTF-8):   Motyw Industrial dla GTK+2
 Group:		Themes
 Obsoletes:	ximian-artwork
 
 %description -n gtk2-theme-Industrial
 GTK+2 Industrial theme.
 
-%description -n gtk2-theme-Industrial -l pl
+%description -n gtk2-theme-Industrial -l pl.UTF-8
 Motyw Industrial dla GTK+2.
 
 %package -n nautilus-theme-Industrial
 Summary:	Nautilus Industrial theme
-Summary(pl):	Motyw Industrial dla Nautilusa
+Summary(pl.UTF-8):   Motyw Industrial dla Nautilusa
 Group:		Themes
 Requires:	nautilus
 Obsoletes:	ximian-artwork
@@ -108,12 +108,12 @@ Obsoletes:	ximian-artwork
 %description -n nautilus-theme-Industrial
 Nautilus Industrial theme.
 
-%description -n nautilus-theme-Industrial -l pl
+%description -n nautilus-theme-Industrial -l pl.UTF-8
 Motyw Industrial dla Nautilusa.
 
 %package -n xmms-skin-Industrial
 Summary:	XMMS skin taken from Industrial
-Summary(pl):	Sk髍ka dla XMMS-a w stylu Industrial
+Summary(pl.UTF-8):   Sk贸rka dla XMMS-a w stylu Industrial
 Group:		X11/Applications/Multimedia
 Requires:	xmms
 Obsoletes:	ximian-artwork-xmms
@@ -121,12 +121,12 @@ Obsoletes:	ximian-artwork-xmms
 %description -n xmms-skin-Industrial
 XMMS skin taken from Industrial.
 
-%description -n xmms-skin-Industrial -l pl
-Sk髍ka dla XMMS-a w stylu Industrial.
+%description -n xmms-skin-Industrial -l pl.UTF-8
+Sk贸rka dla XMMS-a w stylu Industrial.
 
 %package -n XcursorTheme-Industrial
 Summary:	Industrial cursor pack
-Summary(pl):	Motyw kursor體 Industrial
+Summary(pl.UTF-8):   Motyw kursor贸w Industrial
 Group:		X11/XFree86
 Requires:	XFree86 
 Obsoletes:	ximian-artwork
@@ -134,12 +134,12 @@ Obsoletes:	ximian-artwork
 %description -n XcursorTheme-Industrial
 Industrial cursor pack.
 
-%description -n XcursorTheme-Industrial -l pl
-Motyw kursor體 Industrial.
+%description -n XcursorTheme-Industrial -l pl.UTF-8
+Motyw kursor贸w Industrial.
 
 %package -n gdm-theme-Industrial
 Summary:	Industrial GDM theme
-Summary(pl):	Motyw Industrial dla GDM-a
+Summary(pl.UTF-8):   Motyw Industrial dla GDM-a
 Group:		Themes
 Requires:	gdm >= 2.4
 Obsoletes:	ximian-artwork-gdm
@@ -147,12 +147,12 @@ Obsoletes:	ximian-artwork-gdm
 %description -n gdm-theme-Industrial
 Industrial GDM theme.
 
-%description -n gdm-theme-Industrial -l pl
+%description -n gdm-theme-Industrial -l pl.UTF-8
 Motyw Industrial dla GDM-a.
 
 %package -n galeon-theme-Industrial
 Summary:	Industrial Galon theme
-Summary(pl):	Motyw Industrial dla Galeona
+Summary(pl.UTF-8):   Motyw Industrial dla Galeona
 Group:		Themes
 Requires:	galeon
 Obsoletes:	ximian-artwork-galeon
@@ -160,12 +160,12 @@ Obsoletes:	ximian-artwork-galeon
 %description -n galeon-theme-Industrial
 Industrial Galeon theme.
 
-%description -n galeon-theme-Industrial -l pl
+%description -n galeon-theme-Industrial -l pl.UTF-8
 Motyw Industrial dla Galeona.
 
 %package -n desktop-wallpapers-Industrial
 Summary:	Industrial wallpapers
-Summary(pl):	Tapety w stylu Industrial
+Summary(pl.UTF-8):   Tapety w stylu Industrial
 Group:		Themes
 Obsoletes:	ximian-artwork-backgrounds
 Obsoletes:	wallpapers-Industrial
@@ -173,7 +173,7 @@ Obsoletes:	wallpapers-Industrial
 %description -n desktop-wallpapers-Industrial
 Industrial wallpapers.
 
-%description -n desktop-wallpapers-Industrial -l pl
+%description -n desktop-wallpapers-Industrial -l pl.UTF-8
 Tapety w stylu Industrial.
 
 %prep
